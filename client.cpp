@@ -28,7 +28,6 @@ int main(int argc, char *argv[])
     //     return -1;
     // }
 
-    
     // int nbufs = atoi(argv[4]);
     // int bufsize = atoi(argv[5]);
     // int type = atoi(argv[6]);
@@ -151,17 +150,15 @@ int main(int argc, char *argv[])
         }
     }
 
-
     // Reveive the acknowledgment abd quantity from the server for how many
     // time it called read()
     int numOfReads;
     read(clientSD, &numOfReads, sizeof(numOfReads));
 
-        // Print format: Test 1: data-sending time = xxx usec, round-trip time = yyy usec, #reads = zzz
+    // Print format: Test 1: data-sending time = xxx usec, round-trip time = yyy usec, #reads = zzz
     cout << "Test " << type << ": ";
     cout << "#reads = " << numOfReads << endl;
-    
+
     // End session and exit
     close(clientSD);
-    
 }
