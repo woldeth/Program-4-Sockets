@@ -16,7 +16,6 @@
 #include <iostream>
 using namespace std;
 
-
 const int BUFF_SIZE = 1500;
 
 int main(int argc, char *argv[])
