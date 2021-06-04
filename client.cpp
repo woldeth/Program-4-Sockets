@@ -33,12 +33,12 @@ int main(int argc, char *argv[])
 
     //client csslab6 12345 20000 10 150 1
 
-    char argT[1];
-    argT[0] = 'csslab6';
-    char *serverName = &argT[0];
-    //char *serverName = argv[1];
-
-    char serverPort[6] = "12345";
+    // char argT[1];
+    // argT[0] = "csslab6";
+    // char *serverName = &argT[0];
+    char *serverName = argv[1];
+    //1421075
+    char serverPort[6] = "21075";
     // char serverPort = atoi(argv[2]);
 
     int nbufs = 10;

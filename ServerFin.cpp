@@ -1,15 +1,3 @@
-////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-// Nenad Bulicic                                                                           \\
-// CSS 432 - Program 1: Sockets                                                            \\
-////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-// This assignment is intended for two purposes:                                           \\
-// (1) To exercise use of various socket-related system calls                              \\
-// (2) To evaluate dominant overheads of point-to-point communication over 1Gbps networks. \\
-// This program will use the client-server model where a client process establishes        \\
-// a connection to a server, sends data or requests, and closes the connection while       \\
-// the server sends back responses or acknowledgments to the client.                       \\
-////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/socket.h>
