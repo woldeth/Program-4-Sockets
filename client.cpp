@@ -25,33 +25,17 @@ int main(int argc, char *argv[])
     // {
     //     cout << "NOT ENOUGH ARGUMENTS WERE ENTERED" << endl;
     //     return -1;
-    // }
+    // }    
 
-    // int nbufs = atoi(argv[4]);
-    // int bufsize = atoi(argv[5]);
-    // int type = atoi(argv[6]);
+    // ./
 
-    //client csslab6 12345 20000 10 150 1
-
-    // char argT[1];
-    // argT[0] = "csslab6";
-    // char *serverName = &argT[0];
+    // ./client csslab11.uwb.edu 5002 20000 10 50 1 
     char *serverName = argv[1];
-    //1421075
-    char serverPort[6] = "21075";
-    // char serverPort = atoi(argv[2]);
-
-    int nbufs = 10;
-    // int nbufs = atoi(argv[4]);
-
-    const int bufsize = 150;
-    // int bufsize = atoi(argv[5]);
-
-    int repetitions = 20000;
-    // int repetitions = atoi(argv[3]);
-
-    int type = 1;
-    // int type = atoi(argv[6]);
+    char *serverPort = argv[2];
+    int repetitions = atoi(argv[3]);
+    int nbufs = atoi(argv[4]);
+    int bufsize = atoi(argv[5]);
+    int type = atoi(argv[6]);
 
     struct addrinfo hints;
     struct addrinfo *result, *rp;

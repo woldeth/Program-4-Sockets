@@ -56,7 +56,8 @@ int main(int argc, char *argv[])
     //     return -1;
     // }
 
-    //char serverPort[6] = "12345";
+    // --------------------- COMPILE CODE --------------------------- ;
+    // ./server csslab11.uwb.edu 20000
     char *serverPort = argv[1];
     int repetitions = atoi(argv[2]);
 
