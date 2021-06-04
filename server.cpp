@@ -22,6 +22,7 @@ int serverSD;
 
 void servicingThread(int signal)
 {
+    cout << "Tomas2 " << endl;
     // Data buffer for receiving data from client
     char dataBuff[BUFFSIZE];
     int repetitions;
@@ -55,8 +56,9 @@ int main(int argc, char *argv[])
     //     return -1;
     // }
 
-    char serverPort[6] = "12345";
-    // char serverPort = atoi(argv[1]);
+    //char serverPort[6] = "12345";
+    char *serverPort = argv[1];
+    int repetitions = atoi(argv[2]);
 
     char *serverName;
     char databuf[BUFFSIZE];
@@ -91,7 +93,9 @@ int main(int argc, char *argv[])
     cout << "Accepted Socket #: " << newSD << endl;
 
     // Wait for the I/O interrupt signal and change the new socket into an asynchronous connection
+    cout << "Tomas1 " << endl;
     signal(SIGIO, servicingThread);
     fcntl(newSD, F_SETOWN, getpid());
     fcntl(newSD, F_SETFL, FASYNC);
+    cout << "Tomas3 " << endl;
 }

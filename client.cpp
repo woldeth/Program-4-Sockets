@@ -108,6 +108,9 @@ int main(int argc, char *argv[])
 
     freeaddrinfo(result);
 
+
+    
+
     // Data buffer for the write and the reads
     char databuf[nbufs][bufsize];
 
