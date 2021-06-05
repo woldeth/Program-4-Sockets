@@ -101,22 +101,17 @@ int main(int argc, char *argv[])
     // Data writing to server using specified type of transfer
     for (int i = 0; i < repetitions; i++)
     {
+        
         // Multiple writes:
-        // Invokes the write() system call for each data buffer,
-        // thus resulting in calling as many write()s as the
-        // number of data buffs
         if (type == 1)
         {
             for (int j = 0; j < nbufs; j++)
             {
+                //cout << "PEFORMING TEST CASES" << endl;
                 write(clientSD, databuf[j], bufsize);
             }
         }
         // writev:
-        // Allocates an array of iovec data structures, each having
-        // its *iov_base field point to a different data buffer as
-        // well as storing the buffer size in its iov_len field; and
-        // thereafter calls writev( ) to send all data buffers at once.
         else if (type == 2)
         {
             struct iovec vector[nbufs];
@@ -128,8 +123,6 @@ int main(int argc, char *argv[])
             writev(clientSD, vector, nbufs);
         }
         // Single write:
-        // Allocates an nbufs-sized array of data buffers, and thereafter
-        // calls write() to send this array, (i.e., all data buffers) at once.
         else
         {
             write(clientSD, databuf, (nbufs * bufsize));
@@ -141,9 +134,7 @@ int main(int argc, char *argv[])
     int numOfReads;
     read(clientSD, &numOfReads, sizeof(numOfReads));
 
-    // Print format: Test 1: data-sending time = xxx usec, round-trip time = yyy usec, #reads = zzz
-    cout << "Test " << type << ": ";
-    cout << "#reads = " << numOfReads << endl;
+    cout << "NUMOFREADS " << numOfReads << endl;
 
     // End session and exit
     close(clientSD);

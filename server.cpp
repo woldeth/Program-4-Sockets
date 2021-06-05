@@ -12,39 +12,67 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <signal.h>
+#include <pthread.h>
+#include <sys/time.h>
 #include <iostream>
+
 
 using namespace std;
 
 const int BUFFSIZE = 1500;
 const int NUM_CONNECTIONS = 5;
+
+
+char *serverPort;
 int serverSD;
+int repetitions;
+int newSD;
+bool wait = true;
+pthread_cond_t cond;
+pthread_mutex_t lock;
 
-void servicingThread(int signal)
-{
-    cout << "Tomas2 " << endl;
-    // Data buffer for receiving data from client
-    char dataBuff[BUFFSIZE];
-    int repetitions;
-    int newSD;
+// void* servicingThread(void *arg)
+// {
+//     //pthread_mutex_lock(&lock);
+//     cout << "IN PTHREAD " << endl;
+//     // Data buffer for receiving data from client
+//     char dataBuff [BUFFSIZE] ;
+   
+   
+//     // Repeating the read() function for reading from the client and
+//     // keeping track of the number or total reads.
+//     int count = 0;
+//     for (int i = 0; i < repetitions; i++)
+//     {
+         
+//         //cout << "MAKING IT IN LOOP" << endl;
 
-    // Repeating the read() function for reading from the client and
-    // keeping track of the number or total reads.
-    int count = 0;
-    for (int i = 0; i < repetitions; i++)
-    {
-        for (int nRead = 0; (nRead += read(newSD, dataBuff, BUFFSIZE - nRead)) < BUFFSIZE; ++count)
-            ;
-    }
+//         int readBytes = 0;
+//         for (int nRead = 0; nRead < BUFFSIZE; count++) {
+//             cout << "count: " <<  count << endl;
+//             readBytes = read(newSD, dataBuff, BUFFSIZE);
+//             cout << readBytes << endl;
+//             nRead = nRead + readBytes;
+            
+//         }
 
-    // Send the number of read( ) calls made, (i.e., count in the above) as an acknowledgment.
-    write(newSD, &count, sizeof(count));
 
-    // End session and exit
-    close(newSD);
-    close(serverSD);
-    exit(0);
-}
+//     }
+
+//     cout << "PRINT OUT COUNT VALUE: " << count << endl;
+//     // Send the number of read( ) calls made, (i.e., count in the above) as an acknowledgment.
+//     write(newSD, &count, sizeof(count));
+
+//     //cout << "PRINT OUT COUNT VALUE: " << count << endl;
+
+//     // End session and exit
+//     close(newSD);
+//     close(serverSD);
+//     //wait = false;
+//     //pthread_cond_signal(&cond);
+//     //pthread_mutex_unlock(&lock);
+//     exit(0);
+// }
 
 int main(int argc, char *argv[])
 {
@@ -57,13 +85,17 @@ int main(int argc, char *argv[])
     // }
 
     // --------------------- COMPILE CODE --------------------------- ;
-    // ./server csslab11.uwb.edu 20000
-    char *serverPort = argv[1];
-    int repetitions = atoi(argv[2]);
 
-    char *serverName;
-    char databuf[BUFFSIZE];
-    bzero(databuf, BUFFSIZE);
+    // g++ server.cpp -lpthread -o server
+    // ./server 5002 20000
+
+    
+    serverPort = argv[1];
+    repetitions = atoi(argv[2]);
+
+    // char *serverName;
+    // char databuf[BUFFSIZE];
+    // bzero(databuf, BUFFSIZE);
 
     // build the recving socket
     sockaddr_in acceptSocketAddress;
@@ -90,13 +122,53 @@ int main(int argc, char *argv[])
     sockaddr_in newSockAddr;
     socklen_t newSockAddrSize = sizeof(newSockAddr);
 
-    int newSD = accept(serverSD, (sockaddr *)&newSockAddr, &newSockAddrSize);
+    newSD = accept(serverSD, (sockaddr *)&newSockAddr, &newSockAddrSize);
     cout << "Accepted Socket #: " << newSD << endl;
 
-    // Wait for the I/O interrupt signal and change the new socket into an asynchronous connection
-    cout << "Tomas1 " << endl;
-    signal(SIGIO, servicingThread);
-    fcntl(newSD, F_SETOWN, getpid());
-    fcntl(newSD, F_SETFL, FASYNC);
-    cout << "Tomas3 " << endl;
+    // pthread_t serverHelperThread;
+    // pthread_attr_t attr;
+    // pthread_mutex_init(&lock, NULL);
+    // pthread_cond_init(&cond, NULL);
+    // pthread_create(&serverHelperThread, NULL , servicingThread, NULL);
+    // pthread_join(serverHelperThread, NULL);
+
+// ------------------------------------- ***** --------------------------------///
+    cout << "IN PTHREAD " << endl;
+
+    char dataBuff [BUFFSIZE] ;
+   
+    int count = 0;
+    for (unsigned int i = 0; i < repetitions; i++)
+    {
+        //cout << "MAKING IT IN LOOP" << endl;
+        int readBytes = 0;
+        for (unsigned int nRead = 0; nRead < BUFFSIZE; count++) {
+            //cout << "count: " <<  count << endl;
+
+            
+            readBytes = read(newSD, dataBuff, BUFFSIZE - nRead);
+
+            nRead = nRead + readBytes;
+            //cout << readBytes << endl;
+
+
+        }
+        bzero(dataBuff,BUFFSIZE);
+        //cout << "PRINT OUT COUNT VALUE: " << count << endl;
+        int count = 0;
+    }
+
+    
+
+
+    // Send the number of read( ) calls made, (i.e., count in the above) as an acknowledgment.
+    write(newSD, &count, sizeof(count));
+
+
+    // End session and exit
+    close(newSD);
+    close(serverSD);
+
+
+
 }
