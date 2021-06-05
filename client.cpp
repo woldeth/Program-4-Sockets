@@ -93,11 +93,8 @@ int main(int argc, char *argv[])
 
     freeaddrinfo(result);
 
-   
-
     // Data buffer for the write and the reads
     char databuf[nbufs][bufsize];
-
 
     auto start = std::chrono::steady_clock::now();
 
@@ -117,7 +114,7 @@ int main(int argc, char *argv[])
         // writev:
         else if (type == 2)
         {
-            
+
             struct iovec vector[nbufs];
             for (int j = 0; j < nbufs; j++)
             {
@@ -134,13 +131,12 @@ int main(int argc, char *argv[])
     }
     auto end = std::chrono::steady_clock::now();
 
-
     // Reveive the acknowledgment abd quantity from the server for how many
     // time it called read()
     int numOfReads;
     read(clientSD, &numOfReads, sizeof(numOfReads));
-    
-    std::chrono::duration<double> elapsed_seconds = end-start;
+
+    std::chrono::duration<double> elapsed_seconds = end - start;
 
     double totalBits = (nbufs * bufsize * 8) * repetitions;
     double bitsPerSec = totalBits / elapsed_seconds.count();
@@ -150,7 +146,6 @@ int main(int argc, char *argv[])
     cout << "Number of Reads: " << numOfReads << endl;
     cout << "Time to Perform Test: " << elapsed_seconds.count() * 1E6 << " usec\n";
     cout << "Throughput: " << gigaBitsPerSec << " GPS \n";
-
 
     // End session and exit
     close(clientSD);
