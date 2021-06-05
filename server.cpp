@@ -113,7 +113,7 @@ int main(int argc, char *argv[])
     }
     
     
-     
+
         // Listen and accept
         listen(serverSD, NUM_CONNECTIONS); //setting number of pending connections
         sockaddr_in newSockAddr;
