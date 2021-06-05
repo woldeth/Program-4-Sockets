@@ -22,15 +22,8 @@ using namespace std;
 
 const int BUFFSIZE = 1500;
 const int NUM_CONNECTIONS = 5;
-
-
-char *serverPort;
-int serverSD;
 int repetitions;
 int newSD;
-bool wait = true;
-pthread_cond_t cond;
-pthread_mutex_t lock;
 
 void* servicingThread(void* arg)
 {
@@ -64,7 +57,7 @@ void* servicingThread(void* arg)
 
     // End session and exit
     close(newSD);
-    //close(serverSD);
+
 
     //exit(0);
     return nullptr;
@@ -80,18 +73,11 @@ int main(int argc, char *argv[])
     //     return -1;
     // }
 
-    // --------------------- COMPILE CODE --------------------------- ;
-
-    // g++ server.cpp -lpthread -o server
-    // ./server 5002 20000
-
-    
-    serverPort = argv[1];
+  
+    char *serverPort = argv[1];
     repetitions = atoi(argv[2]);
 
-    // char *serverName;
-    // char databuf[BUFFSIZE];
-    // bzero(databuf, BUFFSIZE);
+
 
     // build the recving socket
     sockaddr_in acceptSocketAddress;
@@ -101,7 +87,7 @@ int main(int argc, char *argv[])
     acceptSocketAddress.sin_port = htons(atoi(serverPort));
 
     //Open the socket and bind
-    serverSD = socket(AF_INET, SOCK_STREAM, 0);
+    int serverSD = socket(AF_INET, SOCK_STREAM, 0);
     const int on = 1;
     setsockopt(serverSD, SOL_SOCKET, SO_REUSEADDR, (char *)&on, sizeof(int));
     cout << "Socket #: " << serverSD << endl;
@@ -113,39 +99,22 @@ int main(int argc, char *argv[])
         close(serverSD);
     }
     
-
         // Listen and accept
-        listen(serverSD, NUM_CONNECTIONS); //setting number of pending connections
+        listen(serverSD, NUM_CONNECTIONS); 
         sockaddr_in newSockAddr;
         socklen_t newSockAddrSize = sizeof(newSockAddr);
+
         int numOfConnections = 0; 
      while(numOfConnections < NUM_CONNECTIONS){
         newSD = accept(serverSD, (sockaddr *)&newSockAddr, &newSockAddrSize);
         cout << "Accepted Socket #: " << newSD << endl;
 
-        
-        // pthread_attr_t attr;
-        // pthread_mutex_init(&lock, NULL);
-        // pthread_cond_init(&cond, NULL);
-   
-
-    // ------------------------------------- ***** --------------------------------///
-        cout << "IN PTHREAD " << endl;
-
-        //thread testing(servicingThread, 0);
-        //testing.join();
-        //testing.detach();
-        //cout << numOfConnections << endl
-        ;
         pthread_t serverHelperThread;   
         pthread_create(&serverHelperThread, NULL , servicingThread, NULL);
         pthread_join(serverHelperThread, NULL);
         numOfConnections = numOfConnections  + 1;
-        cout << numOfConnections << endl;
 
     }
 
-
-    //sleep(1);
     close(serverSD);
 }
