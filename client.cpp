@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
     // ./
 
-    // ./client csslab11 5002 20000 10 50 1 
+    // ./client csslab11 5002 20000 10 150 1 
     char *serverName = argv[1];
     char *serverPort = argv[2];
     int repetitions = atoi(argv[3]);

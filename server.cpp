@@ -32,7 +32,7 @@ bool wait = true;
 pthread_cond_t cond;
 pthread_mutex_t lock;
 
-void servicingThread(int a)
+void* servicingThread(void* arg)
 {
 
     char dataBuff [BUFFSIZE] ;
@@ -67,6 +67,7 @@ void servicingThread(int a)
     //close(serverSD);
 
     //exit(0);
+    return nullptr;
 }
 
 int main(int argc, char *argv[])
@@ -112,7 +113,6 @@ int main(int argc, char *argv[])
         close(serverSD);
     }
     
-    
 
         // Listen and accept
         listen(serverSD, NUM_CONNECTIONS); //setting number of pending connections
@@ -123,27 +123,29 @@ int main(int argc, char *argv[])
         newSD = accept(serverSD, (sockaddr *)&newSockAddr, &newSockAddrSize);
         cout << "Accepted Socket #: " << newSD << endl;
 
-        // pthread_t serverHelperThread;
+        
         // pthread_attr_t attr;
         // pthread_mutex_init(&lock, NULL);
         // pthread_cond_init(&cond, NULL);
-        // pthread_create(&serverHelperThread, NULL , servicingThread, NULL);
-        // pthread_join(serverHelperThread, NULL);
+   
 
     // ------------------------------------- ***** --------------------------------///
         cout << "IN PTHREAD " << endl;
 
-        thread testing(servicingThread, 0);
-        testing.detach();
-        //join();
-    
-        //cout << numOfConnections << endl;
+        //thread testing(servicingThread, 0);
+        //testing.join();
+        //testing.detach();
+        //cout << numOfConnections << endl
+        ;
+        pthread_t serverHelperThread;   
+        pthread_create(&serverHelperThread, NULL , servicingThread, NULL);
+        pthread_join(serverHelperThread, NULL);
         numOfConnections = numOfConnections  + 1;
         cout << numOfConnections << endl;
 
     }
 
 
-    sleep(1);
+    //sleep(1);
     close(serverSD);
 }
