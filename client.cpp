@@ -25,11 +25,11 @@ int main(int argc, char *argv[])
     // {
     //     cout << "NOT ENOUGH ARGUMENTS WERE ENTERED" << endl;
     //     return -1;
-    // }    
+    // }
 
     // ./
 
-    // ./client csslab11 5002 20000 10 150 1 
+    // ./client csslab11 5002 20000 10 150 1
     char *serverName = argv[1];
     char *serverPort = argv[2];
     int repetitions = atoi(argv[3]);
@@ -92,16 +92,13 @@ int main(int argc, char *argv[])
 
     freeaddrinfo(result);
 
-
-    
-
     // Data buffer for the write and the reads
     char databuf[nbufs][bufsize];
 
     // Data writing to server using specified type of transfer
     for (int i = 0; i < repetitions; i++)
     {
-        
+
         // Multiple writes:
         if (type == 1)
         {

@@ -17,7 +17,6 @@
 #include <sys/time.h>
 #include <iostream>
 
-
 using namespace std;
 
 const int BUFFSIZE = 1500;
@@ -25,28 +24,26 @@ const int NUM_CONNECTIONS = 5;
 int repetitions;
 int newSD;
 
-void* servicingThread(void* arg)
+void *servicingThread(void *arg)
 {
 
-    char dataBuff [BUFFSIZE] ;
-   
+    char dataBuff[BUFFSIZE];
+
     int count = 0;
     for (unsigned int i = 0; i < repetitions; i++)
     {
         //cout << "MAKING IT IN LOOP" << endl;
         int readBytes = 0;
-        for (unsigned int nRead = 0; nRead < BUFFSIZE; count++) {
+        for (unsigned int nRead = 0; nRead < BUFFSIZE; count++)
+        {
             //cout << "count: " <<  count << endl;
 
-            
             readBytes = read(newSD, dataBuff, BUFFSIZE - nRead);
 
             nRead = nRead + readBytes;
             //cout << readBytes << endl;
-
-
         }
-        bzero(dataBuff,BUFFSIZE);
+        bzero(dataBuff, BUFFSIZE);
         //cout << "PRINT OUT COUNT VALUE: " << count << endl;
         int count = 0;
     }
@@ -54,10 +51,8 @@ void* servicingThread(void* arg)
     // Send the number of read( ) calls made, (i.e., count in the above) as an acknowledgment.
     write(newSD, &count, sizeof(count));
 
-
     // End session and exit
     close(newSD);
-
 
     //exit(0);
     return nullptr;
@@ -73,11 +68,8 @@ int main(int argc, char *argv[])
     //     return -1;
     // }
 
-  
     char *serverPort = argv[1];
     repetitions = atoi(argv[2]);
-
-
 
     // build the recving socket
     sockaddr_in acceptSocketAddress;
@@ -98,22 +90,22 @@ int main(int argc, char *argv[])
         cerr << "Bind Failed" << endl;
         close(serverSD);
     }
-    
-        // Listen and accept
-        listen(serverSD, NUM_CONNECTIONS); 
-        sockaddr_in newSockAddr;
-        socklen_t newSockAddrSize = sizeof(newSockAddr);
 
-        int numOfConnections = 0; 
-     while(numOfConnections < NUM_CONNECTIONS){
+    // Listen and accept
+    listen(serverSD, NUM_CONNECTIONS);
+    sockaddr_in newSockAddr;
+    socklen_t newSockAddrSize = sizeof(newSockAddr);
+
+    int numOfConnections = 0;
+    while (numOfConnections < NUM_CONNECTIONS)
+    {
         newSD = accept(serverSD, (sockaddr *)&newSockAddr, &newSockAddrSize);
         cout << "Accepted Socket #: " << newSD << endl;
 
-        pthread_t serverHelperThread;   
-        pthread_create(&serverHelperThread, NULL , servicingThread, NULL);
+        pthread_t serverHelperThread;
+        pthread_create(&serverHelperThread, NULL, servicingThread, NULL);
         pthread_join(serverHelperThread, NULL);
-        numOfConnections = numOfConnections  + 1;
-
+        numOfConnections = numOfConnections + 1;
     }
 
     close(serverSD);
