@@ -1,7 +1,12 @@
-// Tomas Woldemichael
-// June 1st, 2021
-// Program 4
-
+// ----------------------------------------------------------------------
+// Name: Tomas H Woldemichael
+// Date: June 6, 2021
+// File Name: client.cpp
+// Title: PROGRAM 4
+// ----------------------------------------------------------------------
+// The purpose of this file to act as the client and connect to the server
+// and write to the server.
+//-------------------------------------------------------------------------
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -21,14 +26,12 @@ const int BUFF_SIZE = 1500;
 
 int main(int argc, char *argv[])
 {
-
-    // if (argc < 7)
-    // {
-    //     cout << "NOT ENOUGH ARGUMENTS WERE ENTERED" << endl;
-    //     return -1;
-    // }
-
-    // ./
+    // Check if there are enough arguments
+    if (argc < 7)
+    {
+        cout << "NOT ENOUGH ARGUMENTS WERE ENTERED" << endl;
+        return -1;
+    }
 
     // ./client csslab11 5002 20000 10 150 1
     char *serverName = argv[1];
@@ -93,27 +96,27 @@ int main(int argc, char *argv[])
 
     freeaddrinfo(result);
 
-    // Data buffer for the write and the reads
     char databuf[nbufs][bufsize];
 
+    // Send over the iterations to the server
     int bytesWritten = write(clientSD, &repetitions, sizeof(repetitions));
 
+    // Start time for test cases and round trip
     auto start = std::chrono::steady_clock::now();
 
-    // Data writing to server using specified type of transfer
+    // Perform the various methods of writing to the server
     for (int i = 0; i < repetitions; i++)
     {
-
-        // Multiple writes:
+        // Multiple writes
         if (type == 1)
         {
             for (int j = 0; j < nbufs; j++)
             {
-                //cout << "PEFORMING TEST CASES" << endl;
+
                 write(clientSD, databuf[j], bufsize);
             }
         }
-        // writev:
+        // writev
         else if (type == 2)
         {
 
@@ -125,36 +128,37 @@ int main(int argc, char *argv[])
             }
             writev(clientSD, vector, nbufs);
         }
-        // Single write:
+        // Single write
         else
         {
             write(clientSD, databuf, (nbufs * bufsize));
         }
     }
 
+    // Test case is now complete
     auto end = std::chrono::steady_clock::now();
 
-    // Reveive the acknowledgment abd quantity from the server for how many
-    // time it called read()
     int numOfReads;
+
+    // read the num of reads that the server performed
     read(clientSD, &numOfReads, sizeof(numOfReads));
 
+    // Round trip is now complete
     auto end1 = std::chrono::steady_clock::now();
 
     std::chrono::duration<double> elapsed_seconds = end - start;
     std::chrono::duration<double> elapsed_seconds_rt = end1 - start;
 
-    double totalBits = (nbufs * bufsize * 8) * repetitions;
+    double totalBits = nbufs * bufsize * 8 * repetitions;
     double bitsPerSec = totalBits / elapsed_seconds.count();
     double gigaBitsPerSec = bitsPerSec * 1E-9;
 
-    cout << "Test: " << type << endl;
+    cout << "Test type: " << type << endl;
     cout << "Number of Reads: " << numOfReads << endl;
-    cout << "Time to Perform Test: " << elapsed_seconds.count() * 1E6 << " usec\n";
-    cout << "Round Trip " << elapsed_seconds_rt.count() * 1E6 << " usec\n"; 
+    cout << "Sending data (Test cases): " << elapsed_seconds.count() * 1E6 << " usec\n";
+    cout << "Round Trip (After client reads) " << elapsed_seconds_rt.count() * 1E6 << " usec\n";
     cout << "Throughput: " << gigaBitsPerSec << " GPS \n";
     cout << endl;
 
-    // End session and exit
     close(clientSD);
 }

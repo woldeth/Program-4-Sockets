@@ -1,3 +1,13 @@
+// ----------------------------------------------------------------------
+// Name: Tomas H Woldemichael
+// Date: June 6, 2021
+// File Name: server.cpp
+// Title: PROGRAM 4
+// ----------------------------------------------------------------------
+// The purpose of this file to act as the server and create a socket for
+// which the client can write to and the server can read from using a
+// servicing thread.
+//-------------------------------------------------------------------------
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -20,8 +30,8 @@
 using namespace std;
 
 const int BUFFSIZE = 1500;
-const int NUM_CONNECTIONS = 60;
-int repetitions;
+const int NUM_CONNECTIONS = 60; // 60 different test cases
+int repetitions;                // Amount of iterations
 int newSD;
 
 void *servicingThread(void *arg)
@@ -29,49 +39,47 @@ void *servicingThread(void *arg)
 
     char dataBuff[BUFFSIZE];
 
+    // Read the amount of repeitions from the client
     int bytesRead = read(newSD, &repetitions, sizeof(repetitions));
 
     int count = 0;
     for (unsigned int i = 0; i < repetitions; i++)
     {
-        //cout << "MAKING IT IN LOOP" << endl;
+
         int readBytes = 0;
-        for (unsigned int nRead = 0; nRead < BUFFSIZE; count++)
+
+        for (unsigned int numReads = 0; numReads < BUFFSIZE; count++)
         {
-            //cout << "count: " <<  count << endl;
 
-            readBytes = read(newSD, dataBuff, BUFFSIZE - nRead);
+            readBytes = read(newSD, dataBuff, BUFFSIZE - numReads);
 
-            nRead = nRead + readBytes;
-            //cout << readBytes << endl;
+            numReads = numReads + readBytes;
         }
         bzero(dataBuff, BUFFSIZE);
-        //cout << "PRINT OUT COUNT VALUE: " << count << endl;
         int count = 0;
     }
 
-    // Send the number of read( ) calls made, (i.e., count in the above) as an acknowledgment.
+    // Send the number of reads to the client
     write(newSD, &count, sizeof(count));
 
     // End session and exit
     close(newSD);
 
-    //exit(0);
+    //exit(0)
     return nullptr;
 }
 
 int main(int argc, char *argv[])
 {
     // Error check if enough arguments have been passed in
-    // if (argc < 2)
-    // {
-    //     cout << "NOT ENOUGH ARGUMENTS" << endl;
+    if (argc < 2)
+    {
+        cout << "NOT ENOUGH ARGUMENTS" << endl;
 
-    //     return -1;
-    // }
+        return -1;
+    }
 
     char *serverPort = argv[1];
-    //repetitions = atoi(argv[2]);
 
     // build the recving socket
     sockaddr_in acceptSocketAddress;
@@ -99,6 +107,7 @@ int main(int argc, char *argv[])
     socklen_t newSockAddrSize = sizeof(newSockAddr);
 
     int numOfConnections = 0;
+
     while (numOfConnections < NUM_CONNECTIONS)
     {
         newSD = accept(serverSD, (sockaddr *)&newSockAddr, &newSockAddrSize);
@@ -106,12 +115,10 @@ int main(int argc, char *argv[])
 
         pthread_t serverHelperThread;
         pthread_create(&serverHelperThread, NULL, servicingThread, NULL);
-       
-        //pthread_join(serverHelperThread, NULL);
         numOfConnections = numOfConnections + 1;
         pthread_detach(serverHelperThread);
     }
 
-    sleep(1);
-    close(serverSD);
+    sleep(1);        // for edge case server cloes before last one can finish
+    close(serverSD); // close the main server port
 }
