@@ -91,7 +91,7 @@ int main(int argc, char *argv[])
     }
     else
     {
-        cout << "Client Socket: " << clientSD << endl;
+        //cout << "Client Socket: " << clientSD << endl;
     }
 
     freeaddrinfo(result);
@@ -153,6 +153,7 @@ int main(int argc, char *argv[])
     double bitsPerSec = totalBits / elapsed_seconds.count();
     double gigaBitsPerSec = bitsPerSec * 1E-9;
 
+    //cout << endl;
     cout << "Test type: " << type << endl;
     cout << "Number of Reads: " << numOfReads << endl;
     cout << "Sending data (Test cases): " << elapsed_seconds.count() * 1E6 << " usec\n";

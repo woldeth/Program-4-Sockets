@@ -65,7 +65,7 @@ void *servicingThread(void *arg)
     // End session and exit
     close(newSD);
 
-    //exit(0)
+    //exit(0);
     return nullptr;
 }
 
