@@ -1,383 +1,383 @@
 // --------------------- TEST 15 * 100, TYPE 1 --------------------- //
 Test type: 1
-Number of Reads: 39561
-Sending data (Test cases): 292635 usec
-Round Trip (After client reads) 292755 usec
-Throughput: 0.820134 GPS 
+Number of Reads: 50264
+Sending data (Test cases): 345686 usec
+Round Trip (After client reads) 345775 usec
+Throughput: 0.694272 gbps 
 
 Test type: 1
-Number of Reads: 38408
-Sending data (Test cases): 293470 usec
-Round Trip (After client reads) 333143 usec
-Throughput: 0.817802 GPS 
+Number of Reads: 50562
+Sending data (Test cases): 338750 usec
+Round Trip (After client reads) 338761 usec
+Throughput: 0.708486 gbps 
 
 Test type: 1
-Number of Reads: 42894
-Sending data (Test cases): 308973 usec
-Round Trip (After client reads) 309090 usec
-Throughput: 0.776766 GPS 
+Number of Reads: 30812
+Sending data (Test cases): 279001 usec
+Round Trip (After client reads) 279010 usec
+Throughput: 0.860211 gbps 
 
 Test type: 1
-Number of Reads: 36913
-Sending data (Test cases): 288157 usec
-Round Trip (After client reads) 288169 usec
-Throughput: 0.832881 GPS 
+Number of Reads: 47745
+Sending data (Test cases): 331764 usec
+Round Trip (After client reads) 371245 usec
+Throughput: 0.723405 gbps 
 
 Test type: 1
-Number of Reads: 38753
-Sending data (Test cases): 294413 usec
-Round Trip (After client reads) 334106 usec
-Throughput: 0.815181 GPS 
+Number of Reads: 40703
+Sending data (Test cases): 314970 usec
+Round Trip (After client reads) 315354 usec
+Throughput: 0.761978 gbps 
 
 
 // --------------------- TEST 15 * 100, TYPE 2 --------------------- //
 Test type: 2
-Number of Reads: 20000
-Sending data (Test cases): 45268.5 usec
-Round Trip (After client reads) 45372.6 usec
-Throughput: 5.3017 GPS 
+Number of Reads: 20004
+Sending data (Test cases): 54599.8 usec
+Round Trip (After client reads) 54933.7 usec
+Throughput: 4.39562 gbps 
+
+Test type: 2
+Number of Reads: 20001
+Sending data (Test cases): 48457.6 usec
+Round Trip (After client reads) 88364.9 usec
+Throughput: 4.95278 gbps 
 
 Test type: 2
 Number of Reads: 20000
-Sending data (Test cases): 45336.3 usec
-Round Trip (After client reads) 85321.6 usec
-Throughput: 5.29378 GPS 
+Sending data (Test cases): 46982.6 usec
+Round Trip (After client reads) 46992.5 usec
+Throughput: 5.10827 gbps 
 
 Test type: 2
 Number of Reads: 20000
-Sending data (Test cases): 44953.4 usec
-Round Trip (After client reads) 45098.7 usec
-Throughput: 5.33886 GPS 
+Sending data (Test cases): 44718.6 usec
+Round Trip (After client reads) 84532 usec
+Throughput: 5.3669 gbps 
 
 Test type: 2
 Number of Reads: 20000
-Sending data (Test cases): 45389.1 usec
-Round Trip (After client reads) 45464.4 usec
-Throughput: 5.28761 GPS 
-
-Test type: 2
-Number of Reads: 20000
-Sending data (Test cases): 45003.5 usec
-Round Trip (After client reads) 84824.5 usec
-Throughput: 5.33292 GPS 
+Sending data (Test cases): 47207.1 usec
+Round Trip (After client reads) 86478.7 usec
+Throughput: 5.08398 gbps 
 
 
 // --------------------- TEST 15 * 100, TYPE 3 --------------------- //
 Test type: 3
 Number of Reads: 20000
-Sending data (Test cases): 21897.8 usec
-Round Trip (After client reads) 21997.1 usec
-Throughput: 10.96 GPS 
+Sending data (Test cases): 24118.1 usec
+Round Trip (After client reads) 24754.2 usec
+Throughput: 9.95104 gbps 
 
 Test type: 3
 Number of Reads: 20000
-Sending data (Test cases): 22448.9 usec
-Round Trip (After client reads) 22504.8 usec
-Throughput: 10.691 GPS 
+Sending data (Test cases): 24028.5 usec
+Round Trip (After client reads) 25020.2 usec
+Throughput: 9.98814 gbps 
+
+Test type: 3
+Number of Reads: 20000
+Sending data (Test cases): 24278.8 usec
+Round Trip (After client reads) 25665.3 usec
+Throughput: 9.88515 gbps 
+
+Test type: 3
+Number of Reads: 20002
+Sending data (Test cases): 29265.3 usec
+Round Trip (After client reads) 29686.9 usec
+Throughput: 8.20084 gbps 
 
 Test type: 3
 Number of Reads: 20001
-Sending data (Test cases): 23618.3 usec
-Round Trip (After client reads) 23716.7 usec
-Throughput: 10.1616 GPS 
-
-Test type: 3
-Number of Reads: 20000
-Sending data (Test cases): 23524.8 usec
-Round Trip (After client reads) 23657.5 usec
-Throughput: 10.202 GPS 
-
-Test type: 3
-Number of Reads: 20000
-Sending data (Test cases): 22007.2 usec
-Round Trip (After client reads) 22121.8 usec
-Throughput: 10.9055 GPS 
+Sending data (Test cases): 27870.6 usec
+Round Trip (After client reads) 28676.2 usec
+Throughput: 8.61121 gbps 
 
 
 // --------------------- TEST 30 * 50, TYPE 1 --------------------- //
 Test type: 1
-Number of Reads: 142633
-Sending data (Test cases): 815771 usec
-Round Trip (After client reads) 815783 usec
-Throughput: 0.2942 GPS 
+Number of Reads: 144692
+Sending data (Test cases): 900347 usec
+Round Trip (After client reads) 900359 usec
+Throughput: 0.266564 gbps 
 
 Test type: 1
-Number of Reads: 105705
-Sending data (Test cases): 730167 usec
-Round Trip (After client reads) 730272 usec
-Throughput: 0.328692 GPS 
+Number of Reads: 147468
+Sending data (Test cases): 880881 usec
+Round Trip (After client reads) 880892 usec
+Throughput: 0.272455 gbps 
 
 Test type: 1
-Number of Reads: 37047
-Sending data (Test cases): 572371 usec
-Round Trip (After client reads) 572383 usec
-Throughput: 0.419308 GPS 
+Number of Reads: 135072
+Sending data (Test cases): 793337 usec
+Round Trip (After client reads) 793424 usec
+Throughput: 0.30252 gbps 
 
 Test type: 1
-Number of Reads: 86243
-Sending data (Test cases): 717970 usec
-Round Trip (After client reads) 757214 usec
-Throughput: 0.334276 GPS 
+Number of Reads: 123183
+Sending data (Test cases): 820550 usec
+Round Trip (After client reads) 820566 usec
+Throughput: 0.292487 gbps 
 
 Test type: 1
-Number of Reads: 149052
-Sending data (Test cases): 833353 usec
-Round Trip (After client reads) 833365 usec
-Throughput: 0.287993 GPS 
+Number of Reads: 183535
+Sending data (Test cases): 1.09958e+06 usec
+Round Trip (After client reads) 1.09959e+06 usec
+Throughput: 0.218265 gbps 
 
 
 // --------------------- TEST 30 * 50, TYPE 2 --------------------- //
 Test type: 2
 Number of Reads: 20000
-Sending data (Test cases): 63146.7 usec
-Round Trip (After client reads) 103092 usec
-Throughput: 3.80067 GPS 
-
-Test type: 2
-Number of Reads: 20001
-Sending data (Test cases): 65653.2 usec
-Round Trip (After client reads) 65758.9 usec
-Throughput: 3.65557 GPS 
-
-Test type: 2
-Number of Reads: 20001
-Sending data (Test cases): 59549.6 usec
-Round Trip (After client reads) 99697.5 usec
-Throughput: 4.03025 GPS 
+Sending data (Test cases): 64291.7 usec
+Round Trip (After client reads) 104215 usec
+Throughput: 3.73299 gbps 
 
 Test type: 2
 Number of Reads: 20000
-Sending data (Test cases): 63438.3 usec
-Round Trip (After client reads) 63460.7 usec
-Throughput: 3.7832 GPS 
+Sending data (Test cases): 85078.3 usec
+Round Trip (After client reads) 124750 usec
+Throughput: 2.82093 gbps 
 
 Test type: 2
-Number of Reads: 20001
-Sending data (Test cases): 64348.3 usec
-Round Trip (After client reads) 103929 usec
-Throughput: 3.7297 GPS 
+Number of Reads: 20000
+Sending data (Test cases): 67339.6 usec
+Round Trip (After client reads) 107183 usec
+Throughput: 3.56403 gbps 
+
+Test type: 2
+Number of Reads: 20000
+Sending data (Test cases): 67095.3 usec
+Round Trip (After client reads) 106669 usec
+Throughput: 3.577 gbps 
+
+Test type: 2
+Number of Reads: 20000
+Sending data (Test cases): 66785 usec
+Round Trip (After client reads) 105976 usec
+Throughput: 3.59362 gbps 
 
 
 // --------------------- TEST 30 * 50, TYPE 3 --------------------- //
 Test type: 3
 Number of Reads: 20000
-Sending data (Test cases): 23389.4 usec
-Round Trip (After client reads) 23846.5 usec
-Throughput: 10.2611 GPS 
+Sending data (Test cases): 23257.3 usec
+Round Trip (After client reads) 62977 usec
+Throughput: 10.3193 gbps 
 
 Test type: 3
 Number of Reads: 20000
-Sending data (Test cases): 22760.4 usec
-Round Trip (After client reads) 22853.2 usec
-Throughput: 10.5446 GPS 
+Sending data (Test cases): 22491.7 usec
+Round Trip (After client reads) 22619.6 usec
+Throughput: 10.6706 gbps 
+
+Test type: 3
+Number of Reads: 20001
+Sending data (Test cases): 27458.3 usec
+Round Trip (After client reads) 31623.8 usec
+Throughput: 8.74053 gbps 
 
 Test type: 3
 Number of Reads: 20000
-Sending data (Test cases): 22091.4 usec
-Round Trip (After client reads) 22196 usec
-Throughput: 10.8639 GPS 
+Sending data (Test cases): 31402.5 usec
+Round Trip (After client reads) 71335.7 usec
+Throughput: 7.6427 gbps 
 
 Test type: 3
 Number of Reads: 20000
-Sending data (Test cases): 22762.3 usec
-Round Trip (After client reads) 22893.6 usec
-Throughput: 10.5438 GPS 
-
-Test type: 3
-Number of Reads: 20000
-Sending data (Test cases): 23313.2 usec
-Round Trip (After client reads) 63010.3 usec
-Throughput: 10.2946 GPS 
+Sending data (Test cases): 23066.4 usec
+Round Trip (After client reads) 23818.3 usec
+Throughput: 10.4048 gbps 
 
 
 // --------------------- TEST 60 * 25, TYPE 1 --------------------- //
 Test type: 1
-Number of Reads: 160693
-Sending data (Test cases): 1.34017e+06 usec
-Round Trip (After client reads) 1.34038e+06 usec
-Throughput: 0.179082 GPS 
+Number of Reads: 276818
+Sending data (Test cases): 1.67118e+06 usec
+Round Trip (After client reads) 1.67119e+06 usec
+Throughput: 0.143611 gbps 
 
 Test type: 1
-Number of Reads: 249894
-Sending data (Test cases): 1.55239e+06 usec
-Round Trip (After client reads) 1.55241e+06 usec
-Throughput: 0.1546 GPS 
+Number of Reads: 23812
+Sending data (Test cases): 985059 usec
+Round Trip (After client reads) 985167 usec
+Throughput: 0.24364 gbps 
 
 Test type: 1
-Number of Reads: 155518
-Sending data (Test cases): 1.31483e+06 usec
-Round Trip (After client reads) 1.31492e+06 usec
-Throughput: 0.182533 GPS 
+Number of Reads: 153071
+Sending data (Test cases): 1.38117e+06 usec
+Round Trip (After client reads) 1.38118e+06 usec
+Throughput: 0.173765 gbps 
 
 Test type: 1
-Number of Reads: 116157
-Sending data (Test cases): 1.20495e+06 usec
-Round Trip (After client reads) 1.20503e+06 usec
-Throughput: 0.199178 GPS 
+Number of Reads: 219277
+Sending data (Test cases): 1.53557e+06 usec
+Round Trip (After client reads) 1.53558e+06 usec
+Throughput: 0.156294 gbps 
 
 Test type: 1
-Number of Reads: 74435
-Sending data (Test cases): 1.09268e+06 usec
-Round Trip (After client reads) 1.09269e+06 usec
-Throughput: 0.219644 GPS 
+Number of Reads: 184023
+Sending data (Test cases): 1.61423e+06 usec
+Round Trip (After client reads) 1.61425e+06 usec
+Throughput: 0.148678 gbps 
 
 
 // --------------------- TEST 60 * 25, TYPE 2 --------------------- //
 Test type: 2
 Number of Reads: 20000
-Sending data (Test cases): 104425 usec
-Round Trip (After client reads) 143944 usec
-Throughput: 2.2983 GPS 
-
-Test type: 2
-Number of Reads: 20001
-Sending data (Test cases): 99326.5 usec
-Round Trip (After client reads) 99488 usec
-Throughput: 2.41627 GPS 
-
-Test type: 2
-Number of Reads: 20001
-Sending data (Test cases): 104600 usec
-Round Trip (After client reads) 144030 usec
-Throughput: 2.29445 GPS 
+Sending data (Test cases): 112453 usec
+Round Trip (After client reads) 115740 usec
+Throughput: 2.13423 gbps 
 
 Test type: 2
 Number of Reads: 20000
-Sending data (Test cases): 101649 usec
-Round Trip (After client reads) 101913 usec
-Throughput: 2.36107 GPS 
+Sending data (Test cases): 110404 usec
+Round Trip (After client reads) 149554 usec
+Throughput: 2.17384 gbps 
+
+Test type: 2
+Number of Reads: 20001
+Sending data (Test cases): 107766 usec
+Round Trip (After client reads) 108098 usec
+Throughput: 2.22704 gbps 
+
+Test type: 2
+Number of Reads: 20001
+Sending data (Test cases): 113835 usec
+Round Trip (After client reads) 153124 usec
+Throughput: 2.10832 gbps 
 
 Test type: 2
 Number of Reads: 20000
-Sending data (Test cases): 102158 usec
-Round Trip (After client reads) 102490 usec
-Throughput: 2.34929 GPS 
+Sending data (Test cases): 108694 usec
+Round Trip (After client reads) 148363 usec
+Throughput: 2.20803 gbps 
 
 
 // --------------------- TEST 60 * 25, TYPE 3 --------------------- //
 Test type: 3
 Number of Reads: 20000
-Sending data (Test cases): 30731.8 usec
-Round Trip (After client reads) 30829.4 usec
-Throughput: 7.80951 GPS 
+Sending data (Test cases): 22465 usec
+Round Trip (After client reads) 22563.6 usec
+Throughput: 10.6833 gbps 
 
 Test type: 3
 Number of Reads: 20000
-Sending data (Test cases): 22694.5 usec
-Round Trip (After client reads) 22794.7 usec
-Throughput: 10.5753 GPS 
+Sending data (Test cases): 33281 usec
+Round Trip (After client reads) 33294.9 usec
+Throughput: 7.21131 gbps 
 
 Test type: 3
 Number of Reads: 20001
-Sending data (Test cases): 24465.7 usec
-Round Trip (After client reads) 24586.4 usec
-Throughput: 9.80965 GPS 
-
-Test type: 3
-Number of Reads: 20001
-Sending data (Test cases): 23994.9 usec
-Round Trip (After client reads) 24106.3 usec
-Throughput: 10.0021 GPS 
+Sending data (Test cases): 25090.7 usec
+Round Trip (After client reads) 25201.9 usec
+Throughput: 9.56531 gbps 
 
 Test type: 3
 Number of Reads: 20000
-Sending data (Test cases): 23055.7 usec
-Round Trip (After client reads) 23159.4 usec
-Throughput: 10.4096 GPS 
+Sending data (Test cases): 22766.3 usec
+Round Trip (After client reads) 22871.4 usec
+Throughput: 10.5419 gbps 
+
+Test type: 3
+Number of Reads: 20000
+Sending data (Test cases): 23169.2 usec
+Round Trip (After client reads) 23268.4 usec
+Throughput: 10.3586 gbps 
 
 
 // --------------------- TEST 100 * 15, TYPE 1 --------------------- //
 Test type: 1
-Number of Reads: 237840
-Sending data (Test cases): 2.14657e+06 usec
-Round Trip (After client reads) 2.1466e+06 usec
-Throughput: 0.111806 GPS 
+Number of Reads: 218158
+Sending data (Test cases): 2.17139e+06 usec
+Round Trip (After client reads) 2.17146e+06 usec
+Throughput: 0.110528 gbps 
 
 Test type: 1
-Number of Reads: 309903
-Sending data (Test cases): 2.4917e+06 usec
-Round Trip (After client reads) 2.49178e+06 usec
-Throughput: 0.0963199 GPS 
+Number of Reads: 320762
+Sending data (Test cases): 2.493e+06 usec
+Round Trip (After client reads) 2.49311e+06 usec
+Throughput: 0.0962697 gbps 
 
 Test type: 1
-Number of Reads: 213167
-Sending data (Test cases): 2.1371e+06 usec
-Round Trip (After client reads) 2.1372e+06 usec
-Throughput: 0.112302 GPS 
+Number of Reads: 279589
+Sending data (Test cases): 2.24689e+06 usec
+Round Trip (After client reads) 2.24703e+06 usec
+Throughput: 0.106815 gbps 
 
 Test type: 1
-Number of Reads: 196848
-Sending data (Test cases): 2.08542e+06 usec
-Round Trip (After client reads) 2.08545e+06 usec
-Throughput: 0.115085 GPS 
+Number of Reads: 185309
+Sending data (Test cases): 2.11465e+06 usec
+Round Trip (After client reads) 2.11466e+06 usec
+Throughput: 0.113494 gbps 
 
 Test type: 1
-Number of Reads: 217757
-Sending data (Test cases): 2.1427e+06 usec
-Round Trip (After client reads) 2.14286e+06 usec
-Throughput: 0.112008 GPS 
+Number of Reads: 403093
+Sending data (Test cases): 2.68943e+06 usec
+Round Trip (After client reads) 2.68952e+06 usec
+Throughput: 0.0892381 gbps 
 
 
 // --------------------- TEST 100 * 15, TYPE 2 --------------------- //
 Test type: 2
 Number of Reads: 20000
-Sending data (Test cases): 158869 usec
-Round Trip (After client reads) 158998 usec
-Throughput: 1.51068 GPS 
+Sending data (Test cases): 160520 usec
+Round Trip (After client reads) 200083 usec
+Throughput: 1.49514 gbps 
 
 Test type: 2
 Number of Reads: 20000
-Sending data (Test cases): 149679 usec
-Round Trip (After client reads) 188884 usec
-Throughput: 1.60343 GPS 
+Sending data (Test cases): 164370 usec
+Round Trip (After client reads) 204181 usec
+Throughput: 1.46012 gbps 
 
 Test type: 2
 Number of Reads: 20000
-Sending data (Test cases): 196995 usec
-Round Trip (After client reads) 197183 usec
-Throughput: 1.2183 GPS 
+Sending data (Test cases): 158357 usec
+Round Trip (After client reads) 198032 usec
+Throughput: 1.51556 gbps 
 
 Test type: 2
 Number of Reads: 20000
-Sending data (Test cases): 149755 usec
-Round Trip (After client reads) 149901 usec
-Throughput: 1.60262 GPS 
+Sending data (Test cases): 162329 usec
+Round Trip (After client reads) 201429 usec
+Throughput: 1.47848 gbps 
 
 Test type: 2
 Number of Reads: 20000
-Sending data (Test cases): 151622 usec
-Round Trip (After client reads) 191033 usec
-Throughput: 1.58288 GPS 
+Sending data (Test cases): 160691 usec
+Round Trip (After client reads) 160819 usec
+Throughput: 1.49355 gbps 
 
 
 // --------------------- TEST 100 * 15, TYPE 3 --------------------- //
 Test type: 3
 Number of Reads: 20000
-Sending data (Test cases): 22244.5 usec
-Round Trip (After client reads) 22357.1 usec
-Throughput: 10.7892 GPS 
+Sending data (Test cases): 22207.3 usec
+Round Trip (After client reads) 22327.6 usec
+Throughput: 10.8072 gbps 
 
 Test type: 3
 Number of Reads: 20000
-Sending data (Test cases): 22935.1 usec
-Round Trip (After client reads) 23166.6 usec
-Throughput: 10.4643 GPS 
+Sending data (Test cases): 22440.5 usec
+Round Trip (After client reads) 22552.2 usec
+Throughput: 10.695 gbps 
 
 Test type: 3
 Number of Reads: 20000
-Sending data (Test cases): 23186.1 usec
-Round Trip (After client reads) 23279.6 usec
-Throughput: 10.351 GPS 
-
-Test type: 3
-Number of Reads: 20001
-Sending data (Test cases): 23716.1 usec
-Round Trip (After client reads) 24488.7 usec
-Throughput: 10.1197 GPS 
+Sending data (Test cases): 23395.6 usec
+Round Trip (After client reads) 23494.1 usec
+Throughput: 10.2583 gbps 
 
 Test type: 3
 Number of Reads: 20000
-Sending data (Test cases): 23052.7 usec
-Round Trip (After client reads) 23540.2 usec
-Throughput: 10.4109 GPS 
+Sending data (Test cases): 23077 usec
+Round Trip (After client reads) 23332.3 usec
+Throughput: 10.4 gbps 
+
+Test type: 3
+Number of Reads: 20000
+Sending data (Test cases): 23303.9 usec
+Round Trip (After client reads) 23411.4 usec
+Throughput: 10.2987 gbps 
 

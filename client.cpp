@@ -158,7 +158,7 @@ int main(int argc, char *argv[])
     cout << "Number of Reads: " << numOfReads << endl;
     cout << "Sending data (Test cases): " << elapsed_seconds.count() * 1E6 << " usec\n";
     cout << "Round Trip (After client reads) " << elapsed_seconds_rt.count() * 1E6 << " usec\n";
-    cout << "Throughput: " << gigaBitsPerSec << " GPS \n";
+    cout << "Throughput: " << gigaBitsPerSec << " gbps \n";
     cout << endl;
 
     close(clientSD);
