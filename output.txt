@@ -1,0 +1,443 @@
+---------------------   test 15 * 100,  type 1  --------------------------------
+Client Socket: 3
+Test: 1
+Number of Reads: 51559
+Time to Perform Test: 391416 usec
+Round Trip 431875 usec
+Throughput: 0.613159 GPS 
+
+Client Socket: 3
+Test: 1
+Number of Reads: 48143
+Time to Perform Test: 333807 usec
+Round Trip 373287 usec
+Throughput: 0.718978 GPS 
+
+Client Socket: 3
+Test: 1
+Number of Reads: 50592
+Time to Perform Test: 342378 usec
+Round Trip 382275 usec
+Throughput: 0.70098 GPS 
+
+Client Socket: 3
+Test: 1
+Number of Reads: 62265
+Time to Perform Test: 366067 usec
+Round Trip 405490 usec
+Throughput: 0.655618 GPS 
+
+Client Socket: 3
+Test: 1
+Number of Reads: 51810
+Time to Perform Test: 333031 usec
+Round Trip 333045 usec
+Throughput: 0.720653 GPS 
+
+
+---------------------   test 15 * 100,  type 2  --------------------------------
+Client Socket: 3
+Test: 2
+Number of Reads: 20000
+Time to Perform Test: 48558.2 usec
+Round Trip 48917.4 usec
+Throughput: 4.94252 GPS 
+
+Client Socket: 3
+Test: 2
+Number of Reads: 20005
+Time to Perform Test: 60390.8 usec
+Round Trip 60927.8 usec
+Throughput: 3.97412 GPS 
+
+Client Socket: 3
+Test: 2
+Number of Reads: 20000
+Time to Perform Test: 68881.2 usec
+Round Trip 68973.9 usec
+Throughput: 3.48426 GPS 
+
+Client Socket: 3
+Test: 2
+Number of Reads: 20000
+Time to Perform Test: 58331 usec
+Round Trip 58346.2 usec
+Throughput: 4.11445 GPS 
+
+Client Socket: 3
+Test: 2
+Number of Reads: 20000
+Time to Perform Test: 46714.2 usec
+Round Trip 46800.4 usec
+Throughput: 5.13763 GPS 
+
+
+--------------------- test 15 * 100, type 3  --------------------------------
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 23750.4 usec
+Round Trip 23980.8 usec
+Throughput: 10.1051 GPS 
+
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 25025.5 usec
+Round Trip 25136.6 usec
+Throughput: 9.59022 GPS 
+
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 24936.5 usec
+Round Trip 25432.6 usec
+Throughput: 9.62445 GPS 
+
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 23634.5 usec
+Round Trip 24265.8 usec
+Throughput: 10.1547 GPS 
+
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 24063.8 usec
+Round Trip 24927.5 usec
+Throughput: 9.97348 GPS 
+
+
+--------------------- test 30 *50, type 1  --------------------------------
+Client Socket: 3
+Test: 1
+Number of Reads: 150241
+Time to Perform Test: 860534 usec
+Round Trip 860544 usec
+Throughput: 0.278897 GPS 
+
+Client Socket: 3
+Test: 1
+Number of Reads: 125846
+Time to Perform Test: 825243 usec
+Round Trip 825257 usec
+Throughput: 0.290823 GPS 
+
+Client Socket: 3
+Test: 1
+Number of Reads: 143458
+Time to Perform Test: 848650 usec
+Round Trip 848661 usec
+Throughput: 0.282802 GPS 
+
+Client Socket: 3
+Test: 1
+Number of Reads: 131991
+Time to Perform Test: 813134 usec
+Round Trip 813144 usec
+Throughput: 0.295154 GPS 
+
+Client Socket: 3
+Test: 1
+Number of Reads: 155568
+Time to Perform Test: 889737 usec
+Round Trip 889748 usec
+Throughput: 0.269743 GPS 
+
+
+--------------------- test 30 *50, type 2  --------------------------------
+Client Socket: 3
+Test: 2
+Number of Reads: 20000
+Time to Perform Test: 65404.3 usec
+Round Trip 65753.1 usec
+Throughput: 3.66949 GPS 
+
+Client Socket: 3
+Test: 2
+Number of Reads: 20002
+Time to Perform Test: 72066 usec
+Round Trip 74634.2 usec
+Throughput: 3.33028 GPS 
+
+Client Socket: 3
+Test: 2
+Number of Reads: 20001
+Time to Perform Test: 73761.2 usec
+Round Trip 113829 usec
+Throughput: 3.25374 GPS 
+
+Client Socket: 3
+Test: 2
+Number of Reads: 20000
+Time to Perform Test: 66920.7 usec
+Round Trip 106993 usec
+Throughput: 3.58633 GPS 
+
+Client Socket: 3
+Test: 2
+Number of Reads: 20000
+Time to Perform Test: 80406.1 usec
+Round Trip 120103 usec
+Throughput: 2.98485 GPS 
+
+
+--------------------- test 30 *50, type 3  --------------------------------
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 23259.4 usec
+Round Trip 23433.3 usec
+Throughput: 10.3184 GPS 
+
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 22169.2 usec
+Round Trip 22401.9 usec
+Throughput: 10.8258 GPS 
+
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 22791.6 usec
+Round Trip 23369.9 usec
+Throughput: 10.5302 GPS 
+
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 22144.9 usec
+Round Trip 22407.3 usec
+Throughput: 10.8377 GPS 
+
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 23803.4 usec
+Round Trip 23909.6 usec
+Throughput: 10.0826 GPS 
+
+
+--------------------- test 60 * 25, type 1 --------------------------------
+Client Socket: 3
+Test: 1
+Number of Reads: 244422
+Time to Perform Test: 1.67699e+06 usec
+Round Trip 1.67714e+06 usec
+Throughput: 0.143113 GPS 
+
+Client Socket: 3
+Test: 1
+Number of Reads: 266544
+Time to Perform Test: 1.689e+06 usec
+Round Trip 1.68908e+06 usec
+Throughput: 0.142096 GPS 
+
+Client Socket: 3
+Test: 1
+Number of Reads: 217258
+Time to Perform Test: 1.55083e+06 usec
+Round Trip 1.55091e+06 usec
+Throughput: 0.154756 GPS 
+
+Client Socket: 3
+Test: 1
+Number of Reads: 165492
+Time to Perform Test: 1.37159e+06 usec
+Round Trip 1.3716e+06 usec
+Throughput: 0.17498 GPS 
+
+Client Socket: 3
+Test: 1
+Number of Reads: 239697
+Time to Perform Test: 1.64803e+06 usec
+Round Trip 1.64804e+06 usec
+Throughput: 0.145629 GPS 
+
+
+--------------------- test 60 * 25, type 2 --------------------------------
+Client Socket: 3
+Test: 2
+Number of Reads: 20000
+Time to Perform Test: 115911 usec
+Round Trip 116081 usec
+Throughput: 2.07056 GPS 
+
+Client Socket: 3
+Test: 2
+Number of Reads: 20000
+Time to Perform Test: 107376 usec
+Round Trip 147223 usec
+Throughput: 2.23514 GPS 
+
+Client Socket: 3
+Test: 2
+Number of Reads: 20000
+Time to Perform Test: 108247 usec
+Round Trip 108340 usec
+Throughput: 2.21714 GPS 
+
+Client Socket: 3
+Test: 2
+Number of Reads: 20000
+Time to Perform Test: 107158 usec
+Round Trip 146908 usec
+Throughput: 2.23967 GPS 
+
+Client Socket: 3
+Test: 2
+Number of Reads: 20001
+Time to Perform Test: 108078 usec
+Round Trip 147412 usec
+Throughput: 2.22061 GPS 
+
+
+--------------------- test 60 * 25, type 3 --------------------------------
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 22682.2 usec
+Round Trip 23524.7 usec
+Throughput: 10.581 GPS 
+
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 22424.7 usec
+Round Trip 22534.3 usec
+Throughput: 10.7025 GPS 
+
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 22745 usec
+Round Trip 22843.9 usec
+Throughput: 10.5517 GPS 
+
+Client Socket: 3
+Test: 3
+Number of Reads: 20001
+Time to Perform Test: 24804.4 usec
+Round Trip 25525.3 usec
+Throughput: 9.67569 GPS 
+
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 22260 usec
+Round Trip 22369.2 usec
+Throughput: 10.7817 GPS 
+
+
+--------------------- test 100 * 15, type 1 --------------------------------
+Client Socket: 3
+Test: 1
+Number of Reads: 444831
+Time to Perform Test: 2.87669e+06 usec
+Round Trip 2.8767e+06 usec
+Throughput: 0.0834292 GPS 
+
+Client Socket: 3
+Test: 1
+Number of Reads: 386406
+Time to Perform Test: 2.69379e+06 usec
+Round Trip 2.6938e+06 usec
+Throughput: 0.0890938 GPS 
+
+Client Socket: 3
+Test: 1
+Number of Reads: 159547
+Time to Perform Test: 1.99789e+06 usec
+Round Trip 1.9979e+06 usec
+Throughput: 0.120127 GPS 
+
+Client Socket: 3
+Test: 1
+Number of Reads: 342850
+Time to Perform Test: 2.6109e+06 usec
+Round Trip 2.61092e+06 usec
+Throughput: 0.0919222 GPS 
+
+Client Socket: 3
+Test: 1
+Number of Reads: 415479
+Time to Perform Test: 2.81e+06 usec
+Round Trip 2.81002e+06 usec
+Throughput: 0.0854093 GPS 
+
+
+--------------------- test 100 * 15, type 2 --------------------------------
+Client Socket: 3
+Test: 2
+Number of Reads: 20001
+Time to Perform Test: 164832 usec
+Round Trip 204286 usec
+Throughput: 1.45603 GPS 
+
+Client Socket: 3
+Test: 2
+Number of Reads: 20000
+Time to Perform Test: 160307 usec
+Round Trip 199424 usec
+Throughput: 1.49713 GPS 
+
+Client Socket: 3
+Test: 2
+Number of Reads: 20000
+Time to Perform Test: 175573 usec
+Round Trip 182902 usec
+Throughput: 1.36695 GPS 
+
+Client Socket: 3
+Test: 2
+Number of Reads: 20000
+Time to Perform Test: 159410 usec
+Round Trip 159567 usec
+Throughput: 1.50555 GPS 
+
+Client Socket: 3
+Test: 2
+Number of Reads: 20001
+Time to Perform Test: 156120 usec
+Round Trip 156323 usec
+Throughput: 1.53728 GPS 
+
+
+--------------------- test 100 * 15, type 3 --------------------------------
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 23976.9 usec
+Round Trip 24095.5 usec
+Throughput: 10.0096 GPS 
+
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 23459.4 usec
+Round Trip 23893.1 usec
+Throughput: 10.2304 GPS 
+
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 30996.5 usec
+Round Trip 31084.9 usec
+Throughput: 7.74281 GPS 
+
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 31276.5 usec
+Round Trip 31523.8 usec
+Throughput: 7.67349 GPS 
+
+Client Socket: 3
+Test: 3
+Number of Reads: 20000
+Time to Perform Test: 30471 usec
+Round Trip 30582.7 usec
+Throughput: 7.87635 GPS 
+

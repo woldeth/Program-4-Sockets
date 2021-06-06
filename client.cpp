@@ -96,6 +96,8 @@ int main(int argc, char *argv[])
     // Data buffer for the write and the reads
     char databuf[nbufs][bufsize];
 
+    int bytesWritten = write(clientSD, &repetitions, sizeof(repetitions));
+
     auto start = std::chrono::steady_clock::now();
 
     // Data writing to server using specified type of transfer
@@ -129,6 +131,7 @@ int main(int argc, char *argv[])
             write(clientSD, databuf, (nbufs * bufsize));
         }
     }
+
     auto end = std::chrono::steady_clock::now();
 
     // Reveive the acknowledgment abd quantity from the server for how many
@@ -136,7 +139,10 @@ int main(int argc, char *argv[])
     int numOfReads;
     read(clientSD, &numOfReads, sizeof(numOfReads));
 
+    auto end1 = std::chrono::steady_clock::now();
+
     std::chrono::duration<double> elapsed_seconds = end - start;
+    std::chrono::duration<double> elapsed_seconds_rt = end1 - start;
 
     double totalBits = (nbufs * bufsize * 8) * repetitions;
     double bitsPerSec = totalBits / elapsed_seconds.count();
@@ -145,7 +151,9 @@ int main(int argc, char *argv[])
     cout << "Test: " << type << endl;
     cout << "Number of Reads: " << numOfReads << endl;
     cout << "Time to Perform Test: " << elapsed_seconds.count() * 1E6 << " usec\n";
+    cout << "Round Trip " << elapsed_seconds_rt.count() * 1E6 << " usec\n"; 
     cout << "Throughput: " << gigaBitsPerSec << " GPS \n";
+    cout << endl;
 
     // End session and exit
     close(clientSD);

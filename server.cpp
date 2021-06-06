@@ -20,7 +20,7 @@
 using namespace std;
 
 const int BUFFSIZE = 1500;
-const int NUM_CONNECTIONS = 5;
+const int NUM_CONNECTIONS = 60;
 int repetitions;
 int newSD;
 
@@ -28,6 +28,8 @@ void *servicingThread(void *arg)
 {
 
     char dataBuff[BUFFSIZE];
+
+    int bytesRead = read(newSD, &repetitions, sizeof(repetitions));
 
     int count = 0;
     for (unsigned int i = 0; i < repetitions; i++)
@@ -69,7 +71,7 @@ int main(int argc, char *argv[])
     // }
 
     char *serverPort = argv[1];
-    repetitions = atoi(argv[2]);
+    //repetitions = atoi(argv[2]);
 
     // build the recving socket
     sockaddr_in acceptSocketAddress;
@@ -104,9 +106,12 @@ int main(int argc, char *argv[])
 
         pthread_t serverHelperThread;
         pthread_create(&serverHelperThread, NULL, servicingThread, NULL);
-        pthread_join(serverHelperThread, NULL);
+       
+        //pthread_join(serverHelperThread, NULL);
         numOfConnections = numOfConnections + 1;
+        pthread_detach(serverHelperThread);
     }
 
+    sleep(1);
     close(serverSD);
 }
